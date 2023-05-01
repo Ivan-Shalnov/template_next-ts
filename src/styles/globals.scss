@@ -1,0 +1,10 @@
+html {
+  box-sizing: border-box;
+}
+:root {
+  --toIndex: 10.89; //MOBILE COEF for 375w
+  font-size: toIndex(1);
+  @media (min-width: $breakpoint-xl) {
+    --toIndex: 30; //Desktop coef for 1920w
+  }
+}
