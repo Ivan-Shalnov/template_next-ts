@@ -28,6 +28,10 @@ const nextConfig = {
     return config;
   },
 
+  // SASS
+  sassOptions: {
+    prependData: `@import "@/styles/variables.scss";`,
+  },
   // ...other config
 };
 
