@@ -18,5 +18,6 @@ html {
 
   @media (min-width: $breakpoint-xl) {
     --toIndex: 30; //Desktop coef for 1920w
+    font-size: toIndex(10);
   }
 }
