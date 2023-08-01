@@ -69,6 +69,11 @@ const nextConfig = {
   sassOptions: {
     prependData: `@import "@/styles/variables.scss";`,
   },
+
+  // Images
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
   // ...other config
 };
 
