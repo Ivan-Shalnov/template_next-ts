@@ -3,7 +3,7 @@ const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
 exports.otfToItf = () => {
   return app.gulp
-    .src(`${app.path.fonts}/*.otf`, {})
+    .src(`${app.path.src.fonts}/*.otf`, {})
     .pipe(
       app.plugins.plumber(
         app.plugins.notify.onError({
@@ -17,11 +17,11 @@ exports.otfToItf = () => {
         formats: ['ttf'],
       }),
     )
-    .pipe(app.gulp.dest(`${app.path.public.fonts}/`));
+    .pipe(app.gulp.dest(`${app.path.src.fonts}/`));
 };
 exports.ttfToWoff = () => {
   return app.gulp
-    .src(`${app.path.fonts}/*.ttf`, {})
+    .src(`${app.path.src.fonts}/*.ttf`, {})
     .pipe(
       app.plugins.plumber(
         app.plugins.notify.onError({
@@ -112,7 +112,7 @@ exports.fontsStyle = () => {
 
             fs.appendFile(
               fontsFile,
-              `@font-face{\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("${fontURL}.woff2") format("woff2"), url("${fontURL}.woff") format("woff");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`,
+              `@font-face{\n\tfont-family: '${fontName}';\n\tfont-display: swap;\n\tsrc: url("${fontURL}.woff2") format("woff2"), url("${fontURL}.woff") format("woff");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`,
               cb,
             );
             newFileOnly = fontFileName;

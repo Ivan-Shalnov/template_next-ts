@@ -8,7 +8,15 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main></main>
+      <main>
+        <div
+          style={{
+            fontSize: '5.7rem',
+          }}
+        >
+          ABCDEF
+        </div>
+      </main>
     </>
   );
 }

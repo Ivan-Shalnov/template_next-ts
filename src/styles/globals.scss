@@ -6,8 +6,16 @@ html {
   box-sizing: border-box;
 }
 :root {
-  --toIndex: 10.89; //MOBILE COEF for 375w
-  font-size: toIndex(1);
+  // Responsive font-size
+
+  // --toIndex: 10.89; //MOBILE COEF for 375w
+  $mobile: 10 / 3.9 * 1vw;
+  $tablet: 10 / 7.68 * 1vw;
+  font-size: $mobile;
+  @media (min-width: $breakpoint-md) {
+    font-size: $tablet;
+  }
+
   @media (min-width: $breakpoint-xl) {
     --toIndex: 30; //Desktop coef for 1920w
   }
